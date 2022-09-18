@@ -1,7 +1,6 @@
-var http = require("http");
-
-http.createServer(function(request, response) {
-  response.writeHead(200, {"Content-Type": "text/plain"});
-  response.write("Heroku world!");
-  response.end();
-}).listen(process.env.PORT);
+var express = require('express');
+var app = express();
+app.get("/",(req,res)=>{
+    res.send("Manchidi")
+})
+app.listen(process.env.PORT)
